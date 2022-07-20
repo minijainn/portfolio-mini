@@ -1,11 +1,49 @@
+*{
+  --var-primary-color:#2C2A2D;
+  --var-text-color:#ffffff;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color:#2C2A2D ;
+}
 .App {
   text-align: center;
-}
+  }
+
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+  /* .App-section{
+    margin-left: 6rem;
+    margin-right: 6rem;
+  } */
+ }
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+
+}
+
+/* // X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+ }
+
+/* // XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) { 
+
+ }
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -13,9 +51,9 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* .App-header {
+  background-color:var(--var-primary-color);
+  min-height: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -26,7 +64,7 @@
 
 .App-link {
   color: #61dafb;
-}
+} */
 
 @keyframes App-logo-spin {
   from {
@@ -35,4 +73,178 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+h2{
+  color: #fff;
+  font-size:5vmin;
+  line-height:10vmin;
+}
+.title{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+
+}
+
+h1{
+  font-family:"Poppins",sans-serif;
+  font-size:14vmin;
+  line-height:18vmin;
+}
+
+.gradient-text{
+  color:transparent;
+  background:conic-gradient(
+    #d9d7f1 12%,#baabda 12%,
+    #baabda 33%,#e7fbbe 33%,
+    #e7fbbe 55%,#ffcbcb 55%,
+    #ffcbcb 70%,#b5deff 70%,
+    #b5deff 87%,#f7d1ba 87%);
+    background-size: 50%;
+    background-clip:text;
+    animation:expand-rev 0.5s ease forwards;
+    cursor:pointer;
+}
+
+.gradient-text:hover{
+  animation:expand 0.5s ease forwards;
+}
+
+@keyframes expand{
+  0%{
+    background-size: 50%;
+    background-position:0 0;
+  }
+  20%{
+    background-size: 55%;
+    background-position:0 1em;
+  }
+  100%{
+    background-size: 325%;
+    background-position:-10em -4em;
+  }
+}
+
+
+@keyframes expand-rev{
+  0%{
+    background-size: 325%;
+    background-position:-10em -4em;
+  }
+  20%{
+    background-size: 55%;
+    background-position:0 1em;
+  }
+  100%{
+    background-size: 50%;
+    background-position:0 0;
+  }
+}
+
+.social-icons{
+  padding:0;
+  margin:0;
+  list-style:none;
+}
+.social-icons li{
+  display:inline-block;
+  margin:0.15em;
+  position:relative;
+  font-size:1.5em;
+}
+.social-icons i{
+  color:var(--var-primary-color);
+  position:absolute;
+  top:20px;left:20px;
+  transition:all 265ms ease-out;
+}
+.social-icons a{
+  display:inline-block;
+}
+
+.social-icons a::before{
+  transform:scale(1);
+  -ms-transform:scale(1);
+  -webkit-transform:scale(1);
+  content:" ";
+  width:60px;
+  height:60px;
+  border-radius:100%;
+  display:block;
+  background:linear-gradient(43deg,#e7fbbe 0%,#ffcbcb 46%,#baabda 90%);
+  transition:all 265ms ease-out;
+}
+
+.social-icons a:hover::before{
+  transform:scale(0);
+  transition:all 265ms ease-in;
+}
+
+.social-icons a:hover i{
+  transform:scale(2);
+  -ms-transform: scale(2);
+  -webkit-transform:scale(2);
+  color:#fff;
+  background:linear-gradient(43deg,#e7fbbe 0%,#ffcbcb 46%,#baabda 90%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition:all 265ms ease-in;
+}
+.container-fluid{
+  background-color:var(--var-primary-color) ;
+}
+.navbar{
+  background-color:var(--var-primary-color) ;
+}
+.nav-link{
+  color:white ;
+  font-size:1.2rem;
+}
+.nav-link:hover{
+  text-decoration:underline;
+  color:#baabda ;
+}
+.nav-link:focus, .nav-link:hover {
+  color: #baabda;
+}
+.navbar-brand{
+  font-family: 'Great Vibes', cursive;
+  font-size:2rem;
+}
+.table{
+  color:white;
+  text-align: left;
+}
+tr{
+  border-color: var(--var-primary-color);
+  border-width: 20px;
+}
+th{
+ width:30%; 
+}
+td{
+  width:70%;
+}
+.table ul {
+  padding-left: 0rem;
+}
+.table ul>li{
+  display: inline-block;
+  list-style: none;
+  border: 1px solid white;
+  padding:5px ;
+  margin:5px;
+}
+footer{
+    width: 100%;
+position: absolute;
+bottom: 0px; 
+
+}
+
+footer,.footer-div{
+  background-color:var(--var-primary-color) ;
+  color:var(--var-text-color);
 }
