@@ -1,5 +1,4 @@
 import React from 'react';
-import Footer from './Footer';
 import pic from "./images/myimg2.jpeg";
 import Typewriter from 'typewriter-effect'
 

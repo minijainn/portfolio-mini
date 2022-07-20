@@ -248,3 +248,16 @@ footer,.footer-div{
   background-color:var(--var-primary-color) ;
   color:var(--var-text-color);
 }
+
+.navbar-toggler {
+
+  border: 1px solid white;
+  color:white
+}
+
+.navbar-toggler-icon {
+ 
+  width: 0.5em;
+  height: 1em;
+
+}

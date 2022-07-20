@@ -25,7 +25,7 @@ class App extends React.Component {
         <Navbar/>
         <Routes>
           <Route exact path="/" element={<Main/>} />
-          <Route exact path="/portfolio-mini" element={<Main/>} />
+          <Route exact path="/portfolio-mini/" element={<Main/>} />
           <Route exact path="/main" element={<Main/>} />
           <Route exact path="/project" element={<Project/>} />
           <Route exact path="/about" element={<About/>} />
